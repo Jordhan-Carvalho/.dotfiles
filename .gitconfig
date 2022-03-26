@@ -1,0 +1,11 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = nvim
+[user]
+	email = carvalho@jordhan.dev
+	name = Jordhan Carvalho
+[alias]
+  l = !git log --pretty=format:'%C(blue)%h %C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
+	start = "!f() { [[ -z \"$1\" || -z \"$2\" ]] && { echo \"Usage: git start <trunk> <branch>\"; exit 1; };  { git rev-parse -q --verify MERGE_HEAD && git commit --no-verify; }; BRANCH=`git rev-parse --abbrev-ref HEAD` && git stash save \"Changes on $BRANCH while starting a new implementation branch.\" && git checkout -q master && git pull origin master && git checkout -q $1 && git pull origin $1 && git merge --no-edit master && git branch $2-b $1 && git branch $2 $1 && git push --no-verify -u -f origin $2-b:$2-b && git push --no-verify -u -f origin $2:$2; git checkout -q $2; }; f"
+	finish = "!f() { [[ -z \"$1\" || -z \"$2\" ]] && { echo \"Usage: git finish <trunk> <branch>\"; exit 1; }; BRANCH=`git rev-parse --abbrev-ref HEAD` && git stash save \"Changes on $BRANCH while finishing an implementation branch.\" && git checkout -q \"$1\" && git branch -D $2 && git branch -D $2-b && git push --no-verify origin :$2 :$2-b; git checkout -q $BRANCH; }; f"
+	integrate = "!f() { [[ -z \"$1\" || -z \"$2\" || -z \"$3\" || \"$#\" -gt \"4\" ]] && { echo \"Usage: git integrate <trunk> <branch> <description>\"; exit 1; }; { git rev-parse -q --verify MERGE_HEAD && git commit --no-verify; }; { [ \"--continue\" == \"$4\" ] && git commit --no-verify; }; BRANCH=`git rev-parse --abbrev-ref HEAD` && USER=`git config user.name` && git stash save \"Changes on $BRANCH while integrating to trunk.\" && git checkout -q master && git pull origin master && git checkout -q \"$1\" && git pull origin \"$1\" && git merge --no-edit master && git merge --squash $2 && git commit --no-verify -m \"$3 ($2 branch merged by $USER)\"; git checkout -q $BRANCH; }; f"
