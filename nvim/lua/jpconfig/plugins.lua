@@ -52,12 +52,13 @@ return packer.startup(function(use)
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
     }
   } -- Nvim tree file explorer
-  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'} -- Buffers manager
+  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons', branch = 'main'} -- Buffers manager
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   } -- status bar
-  use "akinsho/toggleterm.nvim"
+  use {"akinsho/toggleterm.nvim", branch = 'main'}
+  -- use "ThePrimeagen/vim-be-good" -- ThePrimeagen vim be good game, should be good on nvim 5.xx
 
   -- ColorSchemes --
   use "morhetz/gruvbox" -- Color theme
