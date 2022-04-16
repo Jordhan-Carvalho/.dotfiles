@@ -83,7 +83,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>p", ":lua vim.lsp.buf.formatting()<cr>", opts)
 
 -- Calls for toggleterm --
--- keymap("n", "<F1>", ":lua _LAZYGIT_TOGGLE()<cr>", opts)
--- keymap("n", "<F2>", ":lua _NODE_TOGGLE()<cr>", opts)
+keymap("n", "<F1>", ":lua _LAZYGIT_TOGGLE()<CR>", opts)
+keymap("n", "<F2>", ":lua _NODE_TOGGLE()<cr>", opts)
 keymap("n", "<F3>", ":2ToggleTerm<cr>", opts)
 keymap("n", "<F4>", ":3ToggleTerm<cr>", opts)
