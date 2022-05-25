@@ -58,7 +58,7 @@ return packer.startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   } -- status bar
   use {"akinsho/toggleterm.nvim", branch = 'main'}
-  -- use "ThePrimeagen/vim-be-good" -- ThePrimeagen vim be good game, should be good on nvim 5.xx
+  use "djoshea/vim-autoread" -- Auto reload when files changes in disk (good for changing branches)
 
   -- ColorSchemes --
   use "morhetz/gruvbox" -- Color theme

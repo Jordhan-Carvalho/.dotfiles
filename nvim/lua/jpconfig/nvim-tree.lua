@@ -42,7 +42,7 @@ nvim_tree.setup {
     "dashboard",
     "alpha",
   },
-  auto_close = false,
+  -- auto_close = false, opts changed https://github.com/kyazdani42/nvim-tree.lua
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
@@ -86,16 +86,16 @@ nvim_tree.setup {
     number = false,
     relativenumber = false,
   },
-  quit_on_open = 0,
-  git_hl = 1,
-  disable_window_picker = 0,
-  root_folder_modifier = ":t",
-  show_icons = {
+  -- quit_on_open = 0, opts changed https://github.com/kyazdani42/nvim-tree.lua
+  -- git_hl = 1, opts changed https://github.com/kyazdani42/nvim-tree.lua
+  -- disable_window_picker = 0, opts changed https://github.com/kyazdani42/nvim-tree.lua
+  -- root_folder_modifier = ":t", opts changed https://github.com/kyazdani42/nvim-tree.lua
+  --[[ show_icons = {
     git = 1,
     folders = 1,
     files = 1,
     folder_arrows = 1,
     tree_width = 30,
-  },
+  }, ]]
 }
 
