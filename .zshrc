@@ -116,3 +116,6 @@ alias lg="lazygit"
 # make xdg-open use vim instead of vscode
 export EDITOR=nvim
 export VISUAL=nvim
+
+# CHANGE CAPS TO CTRL https://askubuntu.com/questions/33774/how-do-i-remap-the-caps-lock-and-ctrl-keys  
+setxkbmap -option ctrl:nocaps
