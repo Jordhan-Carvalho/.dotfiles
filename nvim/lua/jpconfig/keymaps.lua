@@ -85,7 +85,7 @@ keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Formating --
-keymap("n", "<leader>p", ":lua vim.lsp.buf.format()<cr>", opts)
+keymap("n", "<leader>p", ":lua vim.lsp.buf.formatting_sync(nil, 2000)<cr>", opts)
 
 -- Calls for toggleterm --
 keymap("n", "<F1>", ":lua _LAZYGIT_TOGGLE()<CR>", opts)
