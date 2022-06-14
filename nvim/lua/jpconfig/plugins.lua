@@ -59,6 +59,7 @@ return packer.startup(function(use)
   } -- status bar
   use {"akinsho/toggleterm.nvim", branch = 'main'}
   use "djoshea/vim-autoread" -- Auto reload when files changes in disk (good for changing branches)
+  use "github/copilot.vim" -- Github copilot
 
   -- ColorSchemes --
   use "morhetz/gruvbox" -- Color theme

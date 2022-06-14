@@ -41,6 +41,8 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Insert --
 -- Press jk fast to enter
 -- keymap("i", "jk", "<ESC>", opts)
+-- Change copilot keymap 
+keymap("i", "<C-<Tab>>", "copilot#Accept('<CR>')", {expr=true, silent=true})
 
 -- Visual --
 -- Stay in indent mode
