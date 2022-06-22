@@ -9,6 +9,7 @@ local keymap = vim.api.nvim_set_keymap
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+vim.g.copilot_no_tab_map = true
 
 -- Modes
 --   normal_mode = "n",
@@ -42,7 +43,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Press jk fast to enter
 -- keymap("i", "jk", "<ESC>", opts)
 -- Change copilot keymap 
-keymap("i", "<C-<Tab>>", "copilot#Accept('<CR>')", {expr=true, silent=true})
+keymap("i", "<C-p>", "copilot#Accept('<CR>')", {expr=true, silent=true})
 
 -- Visual --
 -- Stay in indent mode
