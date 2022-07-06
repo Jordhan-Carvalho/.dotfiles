@@ -1,4 +1,5 @@
 #!/bin/bash
+## DEPRECATED USING STOW INSTEAD OF THIS SCRIPT
 # A good upgrade would continue to loop the lns without the -f and if it already existis just skip it
 
 set -e
@@ -8,6 +9,8 @@ set -e
 #     touch .gitignore_global
     # }
 
+
+## DEPRECATED USING STOW INSTEAD OF THIS SCRIPT
 function makeLinks() {
     ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig 
     ln -sf ~/.dotfiles/.gitignore_global ~/.gitignore_global 
