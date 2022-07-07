@@ -12,6 +12,11 @@ if [[ -z $DOTFILES ]]; then
 fi
 
 pushd $DOTFILES
+# check if .zshrc exists and if it exists then remove it
+if [[ -f .zshrc ]]; then
+    echo "Removing .zshrc"
+    rm .zshrc
+fi
 # sed will replace the "," with a space so we can loop over the folders
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
