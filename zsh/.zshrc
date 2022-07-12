@@ -113,7 +113,7 @@ export CHROME_BIN='/usr/bin/chromium-browser'
 # Go path
 export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
 # Go path using asdf with a specific go version (go env GOPATH and go env GOROOT)
-# export PATH="$PATH:$HOME/.asdf/installs/golang/1.18.3/packages/bin"                                                                                                                                                                                                                   │
+export PATH="$PATH:$HOME/.asdf/installs/golang/1.18.3/go/bin:$HOME/.asdf/installs/golang/1.18.3/packages/bin"
 
 alias lg="lazygit"
 # make xdg-open use vim instead of vscode
