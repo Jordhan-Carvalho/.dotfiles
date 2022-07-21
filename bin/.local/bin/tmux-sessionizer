@@ -5,10 +5,7 @@ session=$(find ~  ~/work ~/personal -mindepth 1 -maxdepth 1 -type d | fzf)
 # basename will take the final name of the path... and use tr to substitute . for underscore
 session_name=$(basename "$session" | tr . _)
 
-echo "$session_name"
-
 # check if tmux has session with the name 
-# ehco tmux has-session -t "$session_name"
 if ! tmux has-session -t $session_name 2> /dev/null; then
     echo "Session does not exist, creating a session"
 

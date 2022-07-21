@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+window_path=$(find ~  ~/work ~/personal -mindepth 1 -maxdepth 1 -type d | fzf)
+
+# basename will take the final name of the path... and use tr to substitute . for underscore
+window_name=$(basename "$window_path" | tr . _)
+
+# if not inside tmux quit
+if [ -z "$TMUX" ]; then
+    echo "Not in tmux"
+    exit
+fi
+# only create window if it doesn't exist
+if ! tmux list-windows | grep -q "$window_name"; then
+    tmux new-window -n "$window_name" -c "$window_path"
+fi
+# change to the window
+tmux select-window -t "$window_name"

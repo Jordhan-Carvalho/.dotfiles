@@ -124,6 +124,8 @@ export VISUAL=nvim
 # Fzf
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 
+export PATH="$PATH:$HOME/.local/bin"
 # Tmux-sessionizer
 bindkey -s ^f "tmux-sessionizer\n"
-export PATH="$PATH:$HOME/.local/bin"
+# Tmux-windowizer
+bindkey -s ^w "tmux-windowizer\n"
