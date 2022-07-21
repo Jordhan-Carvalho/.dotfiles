@@ -113,9 +113,17 @@ export CHROME_BIN='/usr/bin/chromium-browser'
 # Go path
 export PATH="$PATH:/usr/local/go/bin:$HOME/go/bin"
 # Go path using asdf with a specific go version (go env GOPATH and go env GOROOT)
+# It appears to duped, maybe asdf does it automatically?
 export PATH="$PATH:$HOME/.asdf/installs/golang/1.18.3/go/bin:$HOME/.asdf/installs/golang/1.18.3/packages/bin"
 
 alias lg="lazygit"
 # make xdg-open use vim instead of vscode
 export EDITOR=nvim
 export VISUAL=nvim
+
+# Fzf
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+
+# Tmux-sessionizer
+bindkey -s ^f "tmux-sessionizer\n"
+export PATH="$PATH:$HOME/.local/bin"
