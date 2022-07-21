@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+session=$(find ~  ~/work ~/personal -mindepth 1 -maxdepth 1 -type d | fzf)
+
+# basename will take the final name of the path... and use tr to substitute . for underscore
+session_name=$(basename "$session" | tr . _)
+
+echo "$session_name"
+
+# check if tmux has session with the name 
+# ehco tmux has-session -t "$session_name"
+if ! tmux has-session -t $session_name 2> /dev/null; then
+    echo "Session does not exist, creating a session"
+
+    # if inside tmux, exit and create a new session
+    if [ -n "$TMUX" ]; then
+      echo "Inside tmux, creating a new session"
+      tmux new-session -s "$session_name" -c "$session" -d
+      tmux switch-client -t "$session_name"
+      exit 0
+    fi
+
+    tmux new-session -s "$session_name" -c "$session"
+    exit 0
+fi
+
+echo "Session already exists"
+
+# if inside tmux switch-client else attach to session
+if [ -n "$TMUX" ]; then
+    tmux switch-client -t "$session_name"
+else
+    tmux attach -t "$session_name"
+fi
