@@ -126,6 +126,6 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 
 export PATH="$PATH:$HOME/.local/bin"
 # Tmux-sessionizer
-bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s ^s "tmux-sessionizer\n"
 # Tmux-windowizer
 bindkey -s ^w "tmux-windowizer\n"

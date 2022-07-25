@@ -95,3 +95,7 @@ keymap("n", "<F1>", ":lua _LAZYGIT_TOGGLE()<CR>", opts)
 keymap("n", "<F2>", ":lua _NODE_TOGGLE()<cr>", opts)
 keymap("n", "<F3>", ":2ToggleTerm<cr>", opts)
 keymap("n", "<F4>", ":3ToggleTerm<cr>", opts)
+
+-- Tmux Windowizer initilizer -- 
+keymap("n", "<C-w>", ":silent !tmux neww tmux-windowizer<cr>", opts)
+keymap("n", "<C-s>", ":silent !tmux neww tmux-sessionizer<cr>", opts)
