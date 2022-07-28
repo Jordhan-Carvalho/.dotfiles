@@ -3,7 +3,7 @@
 # the -z evaluates to true if the variable is empty
 if [[ -z $STOW_FOLDERS ]]; then
     echo "STOW_FOLDERS is not set"
-    STOW_FOLDERS="nvim,tmux,git,zsh,golang,bin"
+    STOW_FOLDERS="nvim,tmux,git,zsh,golang,bin,i3"
 fi
 
 if [[ -z $DOTFILES ]]; then
