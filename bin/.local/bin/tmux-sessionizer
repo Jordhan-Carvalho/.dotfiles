@@ -11,12 +11,12 @@ if ! tmux has-session -t $session_name 2> /dev/null; then
 
     # if inside tmux, exit and create a new session
     if [ -n "$TMUX" ]; then
-      tmux new-session -s "$session_name" -c "$session" -d
+      tmux new-session -s "$session_name" -c "$session" -n "$session_name" -d
       tmux switch-client -t "$session_name"
       exit 0
     fi
 
-    tmux new-session -s "$session_name" -c "$session"
+    tmux new-session -s "$session_name" -c "$session" -n "$session_name"
     exit 0
 fi
 

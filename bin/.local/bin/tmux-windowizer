@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-window_path=$(find ~  ~/work ~/personal -mindepth 1 -maxdepth 1 -type d | fzf)
+window_path=$(find ~  ~/work ~/personal ~/personal/godocs -mindepth 1 -maxdepth 1 -type d | fzf)
 
 # basename will take the final name of the path... and use tr to substitute . for underscore
 window_name=$(basename "$window_path" | tr . _)
