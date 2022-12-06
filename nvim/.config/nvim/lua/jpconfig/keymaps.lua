@@ -81,14 +81,14 @@ keymap(
 ) -- Show dotfiles except .git folder
 -- This options removes the preview and set the theme to dropdown
 -- keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>[", "<cmd>Telescope diagnostics<cr>", opts)
 
 -- Nvimtree --
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Formating --
-keymap("n", "<leader>p", ":lua vim.lsp.buf.formatting_sync(nil, 2000)<cr>", opts)
+--[[ keymap("n", "<leader>p", ":lua vim.lsp.buf.formatting_sync(nil, 2000)<cr>", opts) ]]
 
 -- Calls for toggleterm --
 keymap("n", "<F1>", ":lua _LAZYGIT_TOGGLE()<CR>", opts)
