@@ -63,8 +63,19 @@ return packer.startup(function(use)
 
   -- ColorSchemes --
   use "morhetz/gruvbox" -- Color theme
+  use "folke/tokyonight.nvim" -- Color theme
   use "rakr/vim-one" -- Color Theme
+  use "bluz71/vim-nightfly-colors" -- COlor theme
   use "lifepillar/vim-solarized8" -- Color theme
+  use "sainnhe/sonokai"-- Color theme
+  use "amadeus/vim-evokai" -- Color theme
+  use "sainnhe/everforest" -- Color theme
+  use "nanotech/jellybeans.vim" -- Color theme
+  use "mcchrish/hyperterm-gruvbox-dark" -- Color theme
+  use "tomasr/molokai" -- Color theme
+  use "bluz71/vim-moonfly-colors" -- Color theme
+  use "patstockwell/vim-monokai-tasty" -- Color theme
+
   -- cmp plugins (completion)
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions

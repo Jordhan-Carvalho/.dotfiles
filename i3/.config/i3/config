@@ -237,7 +237,7 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 
 ## WALLPAPER SETTING USING FEH
 # exec feh --bg-fill /home/jordhan/Pictures/wallpaper/346777.jpg
-exec --no-startup-id feh --bg-fill /home/jordhan/Pictures/wallpaper/346777.jpg
+exec --no-startup-id feh --bg-fill /home/jordhan/Pictures/wallpaper/ai-wallpapers/7.jpg
 exec --no-startup-id /usr/libexec/gsd-xsettings
 
 ## LOCK SCREEN
