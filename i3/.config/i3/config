@@ -237,15 +237,17 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 
 ## WALLPAPER SETTING USING FEH
 # exec feh --bg-fill /home/jordhan/Pictures/wallpaper/346777.jpg
-exec --no-startup-id feh --bg-fill /home/jordhan/Pictures/wallpaper/ai-wallpapers/7.jpg
+exec --no-startup-id feh --bg-fill "/home/$USER/Pictures/wallpapers/ai-wallpapers/7.jpg"
 exec --no-startup-id /usr/libexec/gsd-xsettings
 
 ## LOCK SCREEN
-# set $i3lockwall i3lock -i /path/to/my-wonderful-image.png -t
-set $i3lockwall sh ~/.config/i3/scripts/lock.sh
+
+# The code bellow will use the lock.sh to create dynamic current image pixelated
+set $i3lockwall sh ~/.config/i3/scripts/i3locktest.sh
+# set $i3lockwall sh ~/.config/i3/scripts/lockpixalated.sh
 bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
-# This should lock the screen after 15 minutes
-exec --no-startup-id xautolock -time 15 -locker '/home/$USER/.config/i3/scripts/lock.sh' -notify 15 -notifier "notify-send 'Screen will lock in 15 s'" &
+# Lock the scren after 10 minutes with a image
+exec --no-startup-id xautolock -time 10 -locker i3lockwall -notify 10 -notifier "notify-send 'Screen will lock in 10 s'" &
 # floating pop up automatically...could be also for_window [class="Keepassx"]...TO GET THE CLASS AND INSTANCE xprop | grep WM_CLASS
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
