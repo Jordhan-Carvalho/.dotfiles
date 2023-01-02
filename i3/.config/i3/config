@@ -243,7 +243,7 @@ exec --no-startup-id /usr/libexec/gsd-xsettings
 ## LOCK SCREEN
 
 # The code bellow will use the lock.sh to create dynamic current image pixelated
-set $i3lockwall sh ~/.config/i3/scripts/i3locktest.sh
+set $i3lockwall sh ~/.config/i3/scripts/i3lockimage.sh
 # set $i3lockwall sh ~/.config/i3/scripts/lockpixalated.sh
 bindsym $mod+Ctrl+Shift+l exec --no-startup-id $i3lockwall
 # Lock the scren after 10 minutes with a image
